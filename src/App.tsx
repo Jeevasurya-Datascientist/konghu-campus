@@ -4,6 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// Helper Component Import
+import ScrollToTop from "./components/ScrollToTop"; // Assuming you saved it in src/components/
+
 // Page Imports
 import Index from "./pages/Index";
 import AdmissionForm from "./pages/AdmissionForm";
@@ -33,6 +36,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        {/* This component will handle scrolling to the top on every navigation */}
+        <ScrollToTop />
         <Routes>
           {/* Main Pages */}
           <Route path="/" element={<Index />} />
@@ -48,10 +53,8 @@ const App = () => (
           <Route path="/departments/chemical-engineering" element={<ChemicalEngineering />} />
           <Route path="/departments/petrochemical-engineering" element={<PetrochemicalEngineering />} />
           
-          {/* --- FIX: Updated URL paths to be shorter and match browser URL --- */}
           <Route path="/departments/eee" element={<ElectricalAndElectronicsEngineering />} />
           <Route path="/departments/ece" element={<ElectronicsAndCommunicationEngineering />} />
-          {/* ------------------------------------------------------------------ */}
           
           <Route path="/departments/civil-engineering" element={<CivilEngineering />} />
           <Route path="/departments/mechanical-engineering" element={<MechanicalEngineering />} />
