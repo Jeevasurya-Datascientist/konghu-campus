@@ -1,18 +1,15 @@
-// src/components/PageWrapper.tsx
-
 import { useEffect } from 'react';
-import { useLoading } from '@/hooks/LoadingContext';
+import { useLoading } from '@/hooks/LoadingContext'; // Uses the @ alias which is correct for your setup
 
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   const { setLoading } = useLoading();
 
-  // This effect runs only when the component (and its children) has mounted.
+  // This effect runs only ONCE when the page component has mounted
   useEffect(() => {
-    // Hide the loader.
+    // Hide the loader
     setLoading(false);
-  }, [setLoading]);
+  }, []); // Empty dependency array ensures it runs only on mount
 
-  // Render the actual page content.
   return <>{children}</>;
 };
 
