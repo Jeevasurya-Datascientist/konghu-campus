@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  
+  // Create a ref to get the header's height for scroll-offset calculations
+  const headerRef = useRef<HTMLElement>(null);
 
   // Effect to handle background change on scroll
   useEffect(() => {
@@ -19,20 +22,18 @@ const Header = () => {
   // Effect to lock body scroll when mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      // Get the current scroll Y position
       const scrollY = window.scrollY;
-      
-      // Apply styles to the body to lock scroll
       document.body.style.position = 'fixed';
       document.body.style.top = `-${scrollY}px`;
       document.body.style.width = '100%';
+      // IMPROVEMENT: Prevent scrolling the content behind the overlay on mobile
+      document.body.style.overscrollBehaviorY = 'contain';
 
-      // Return a cleanup function to run when the menu is closed or component unmounts
       return () => {
         document.body.style.position = '';
         document.body.style.top = '';
         document.body.style.width = '';
-        // Restore the scroll position
+        document.body.style.overscrollBehaviorY = '';
         window.scrollTo(0, scrollY);
       };
     }
@@ -50,24 +51,40 @@ const Header = () => {
     { name: 'Hostel & Transport', href: '/hostel-transport' },
   ];
 
+  // IMPROVEMENT: Updated navigation click handler for better anchor link scrolling
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false); // Close menu on any navigation
+    
     if (href.startsWith('/')) {
       navigate(href);
+      // NOTE: Assumes a <ScrollToTop /> component is used in App.tsx for page navigations
     } else if (href.startsWith('#')) {
-      // Use a slight timeout to allow the menu to close before scrolling
-      setTimeout(() => {
-        const element = document.querySelector(href);
+      
+      const scrollToAction = () => {
+        const element = document.querySelector<HTMLElement>(href);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          // If element not on current page, navigate to home and then scroll
-          navigate('/');
-          setTimeout(() => {
-            document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
+          const headerHeight = headerRef.current?.offsetHeight || 0;
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          // Calculate the final position, subtracting header height and adding 20px of padding
+          const offsetPosition = elementPosition - headerHeight - 20;
+
+          window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+          });
         }
-      }, 100);
+      };
+      
+      // Check if the element exists on the current page
+      if (document.querySelector(href)) {
+        // A short timeout is needed to allow the scroll-lock to release before we scroll
+        setTimeout(scrollToAction, 100);
+      } else {
+        // If not, navigate to the homepage first, then scroll
+        navigate('/');
+        // Use a longer timeout to allow the homepage to render
+        setTimeout(scrollToAction, 200);
+      }
     }
   };
 
@@ -96,8 +113,8 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      {/* Main Header - Attach the ref here */}
+      <header ref={headerRef} className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/90 backdrop-blur-lg shadow-md' 
           : 'bg-white'
@@ -105,7 +122,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center py-3">
             {/* Logo Section */}
-            <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => navigate('/')}>
+            <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => handleNavClick('/')}>
               <img 
                 src="/lovable-uploads/192376b7-a3a6-4a41-8428-e34e5a4290bc.png" 
                 alt="Konghu Velalar Polytechnic College Logo" 
@@ -149,7 +166,6 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        {/* Backdrop Overlay */}
         <div 
             className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 lg:hidden ${
                 isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
@@ -157,7 +173,6 @@ const Header = () => {
             onClick={() => setIsMenuOpen(false)}
         ></div>
         
-        {/* Menu Panel */}
         <div className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-50 shadow-xl transition-transform duration-300 ease-in-out lg:hidden ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
