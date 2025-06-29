@@ -19,14 +19,23 @@ const Header = () => {
   // Effect to lock body scroll when mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
+      // Get the current scroll Y position
+      const scrollY = window.scrollY;
+      
+      // Apply styles to the body to lock scroll
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+
+      // Return a cleanup function to run when the menu is closed or component unmounts
+      return () => {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        // Restore the scroll position
+        window.scrollTo(0, scrollY);
+      };
     }
-    // Cleanup function to restore scroll on component unmount
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
   }, [isMenuOpen]);
 
   const navItems = [
