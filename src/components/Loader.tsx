@@ -7,7 +7,7 @@ const Loader = () => {
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-white/80 backdrop-blur-sm">
       <div className="flex flex-col items-center text-center">
         <img 
-          src="/kvpc-logo.png" 
+          src="/192376b7-a3a6-4a41-8428-e34e5a4290bc.png" 
           alt="Loading..." 
           className="w-32 h-32 animate-pulse"
         />
