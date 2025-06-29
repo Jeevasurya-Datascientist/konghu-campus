@@ -1,14 +1,18 @@
+// src/components/PageWrapper.tsx
+
 import { useEffect } from 'react';
-import { useLoading } from '@/hooks/LoadingContext'; // Uses the @ alias which is correct for your setup
+import { useLocation } from 'react-router-dom'; // <-- IMPORT THIS HOOK
+import { useLoading } from '@/hooks/LoadingContext';
 
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   const { setLoading } = useLoading();
+  const { pathname } = useLocation(); // <-- GET THE CURRENT URL PATH
 
-  // This effect runs only ONCE when the page component has mounted
+  // This effect will now run EVERY TIME the URL path changes.
   useEffect(() => {
-    // Hide the loader
+    // Hide the loader.
     setLoading(false);
-  }, []); // Empty dependency array ensures it runs only on mount
+  }, [pathname]); // <-- ADD 'pathname' TO THE DEPENDENCY ARRAY
 
   return <>{children}</>;
 };
