@@ -1,11 +1,15 @@
+// src/App.tsx
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Helper Component Import
-import ScrollToTop from "./components/ScrollToTop"; // Assuming you saved it in src/components/
+// NEW IMPORTS
+import { LoadingProvider, useLoading } from "./contexts/LoadingContext";
+import Loader from "./components/Loader";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Page Imports
 import Index from "./pages/Index";
@@ -30,16 +34,16 @@ import ElectronicsAndCommunicationEngineering from "./pages/departments/Electron
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+// A new component to handle the routes and conditional loader
+const AppContent = () => {
+  const { isLoading } = useLoading();
+
+  return (
+    <>
+      {isLoading && <Loader />}
       <BrowserRouter>
-        {/* This component will handle scrolling to the top on every navigation */}
         <ScrollToTop />
         <Routes>
-          {/* Main Pages */}
           <Route path="/" element={<Index />} />
           <Route path="/admission" element={<AdmissionForm />} />
           <Route path="/campus-tour" element={<CampusTour />} />
@@ -47,24 +51,30 @@ const App = () => (
           <Route path="/hostel-transport" element={<HostelTransport />} />
           <Route path="/clubs-cells" element={<ClubsCells />} />
           <Route path="/academics" element={<Academics />} />
-
-          {/* Department Pages */}
           <Route path="/departments/computer-engineering" element={<ComputerEngineering />} />
           <Route path="/departments/chemical-engineering" element={<ChemicalEngineering />} />
           <Route path="/departments/petrochemical-engineering" element={<PetrochemicalEngineering />} />
-          
           <Route path="/departments/eee" element={<ElectricalAndElectronicsEngineering />} />
           <Route path="/departments/ece" element={<ElectronicsAndCommunicationEngineering />} />
-          
           <Route path="/departments/civil-engineering" element={<CivilEngineering />} />
           <Route path="/departments/mechanical-engineering" element={<MechanicalEngineering />} />
           <Route path="/departments/automobile-engineering" element={<AutomobileEngineering />} />
           <Route path="/departments/dmlt" element={<DMLT />} />
-          
-          {/* Not Found Page */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+    </>
+  );
+}
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <LoadingProvider>
+        <AppContent />
+      </LoadingProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
