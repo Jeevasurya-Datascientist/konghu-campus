@@ -153,8 +153,11 @@ const Header = () => {
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
             <div className="flex flex-col h-full">
-                <div className="p-5 border-b">
+                <div className="flex items-center justify-between p-5 border-b">
                     <h2 className="text-xl font-bold text-blue-900">Menu</h2>
+                    <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu" className="p-2 -m-2">
+                      <X className="h-6 w-6 text-gray-700" />
+                    </button>
                 </div>
                 <nav className="flex-grow p-5 space-y-2 overflow-y-auto">
                     {navItems.map((item, index) => (
