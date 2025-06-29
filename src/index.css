@@ -97,7 +97,13 @@
     @apply border-border;
   }
 
+  /* 
+    MODIFICATION: 
+    Combined html and body selectors.
+    Added w-full (width: 100%) and overflow-x-hidden to prevent horizontal scrolling.
+  */
+  html,
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground w-full overflow-x-hidden;
   }
 }
