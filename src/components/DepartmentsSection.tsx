@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -153,7 +152,10 @@ const DepartmentsSection = () => {
                   {/* Button */}
                   <Button 
                     className={`w-full bg-gradient-to-r ${dept.color} hover:opacity-90 text-white font-semibold group relative overflow-hidden`}
-                    onClick={() => navigate(`/departments/${dept.slug}`)}
+                    onClick={(e) => {
+                      e.stopPropagation(); // This prevents the click from bubbling up
+                      navigate(`/departments/${dept.slug}`);
+                    }}
                   >
                     <span className="relative z-10 flex items-center justify-center">
                       Learn More
