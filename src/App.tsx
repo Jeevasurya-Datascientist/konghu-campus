@@ -7,8 +7,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // NEW IMPORTS
-import { LoadingProvider, useLoading } from "./contexts/LoadingContext";
-import Loader from "./components/Loader";
+import { LoadingProvider, useLoading } from "./hooks/LoadingContext";
+// --- FIX: Corrected the import path for Loader ---
+import Loader from "./components/Loader"; 
 import ScrollToTop from "./components/ScrollToTop";
 
 // Page Imports
