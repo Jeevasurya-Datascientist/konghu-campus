@@ -12,19 +12,19 @@ const PetroChemicalEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Petroleum Engineering",
       experience: "20 years",
-      image: "/lovable-uploads/department/petrochemical.png"},
+      image: "/lovable-uploads/departments/petrochemical.png"},
     {
       name: "Prof. Sunita Verma",
       designation: "Professor",
       qualification: "M.Tech in Chemical Engineering",
       experience: "16 years",
-      image: "/lovable-uploads/department/petrochemical.png"},
+      image: "/lovable-uploads/departments/petrochemical.png"},
     {
       name: "Mr. Rajiv Menon",
       designation: "Assistant Professor",
       qualification: "M.E in Process Design Engineering",
       experience: "10 years",
-      image: "/lovable-uploads/department/petrochemical.png"
+      image: "/lovable-uploads/departments/petrochemical.png"
     },
   ];
 
