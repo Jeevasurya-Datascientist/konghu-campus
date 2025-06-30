@@ -13,21 +13,21 @@ const AutomobileEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Automobile Engineering",
       experience: "17 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/automobile.png"
     },
     {
       name: "Prof. Anitha Rao",
       designation: "Associate Professor",
       qualification: "M.Tech in Automotive Engineering",
       experience: "13 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/automobile.png"
     },
     {
       name: "Mr. Sanjay Reddy",
       designation: "Assistant Professor",
       qualification: "M.E in Automobile Engineering",
       experience: "9 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/automobile.png"
     }
   ];
 

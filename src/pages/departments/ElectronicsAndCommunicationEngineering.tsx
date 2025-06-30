@@ -12,21 +12,21 @@ const ElectronicsAndCommunicationEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Communication Systems",
       experience: "21 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/ece.png"
     },
     {
       name: "Prof. Rohan Patil",
       designation: "Professor",
       qualification: "M.Tech in Embedded Systems",
       experience: "16 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/ece.png"
     },
     {
       name: "Dr. Sneha Chen",
       designation: "Associate Professor",
       qualification: "Ph.D in Signal Processing",
       experience: "12 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/ece.png"
     }
   ];
 

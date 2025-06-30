@@ -8,7 +8,7 @@ const InfrastructureSection = () => {
       id: 1,
       title: 'Modern Computer Labs',
       description: 'State-of-the-art computer laboratories with latest hardware and software for comprehensive learning.',
-      image: '/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png',
+      image: '/lovable-uploads/lovable-uploads/departments/computer.png',
       icon: Computer,
       features: ['Latest Hardware', 'High-Speed Internet', 'Modern Software', '24/7 Access']
     },

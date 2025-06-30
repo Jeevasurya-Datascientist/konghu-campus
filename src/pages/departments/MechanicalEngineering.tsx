@@ -13,21 +13,21 @@ const MechanicalEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Mechanical Engineering",
       experience: "20 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/mechanical.png"
     },
     {
       name: "Prof. Lakshmi Devi",
       designation: "Associate Professor",
       qualification: "M.Tech in Production Engineering",
       experience: "16 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/mechanical.png"
     },
     {
       name: "Mr. Vijay Kumar",
       designation: "Assistant Professor",
       qualification: "M.E in Mechanical Engineering",
       experience: "12 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/mechanical.png"
     }
   ];
 

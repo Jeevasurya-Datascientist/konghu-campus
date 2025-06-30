@@ -9,7 +9,7 @@ const HeroSection = () => {
   
   // Dynamic hero images that change every 5 seconds
   const heroImages = [
-    "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png",
+    "/lovable-uploads/lovable-uploads/departments/computer.png",
     "/lovable-uploads/9b2c1b6c-9f84-4436-95d7-6eb87d6e78b2.png",
     "/lovable-uploads/3156b9ab-cff6-4044-ab99-a6f46f01eec6.png",
     "/lovable-uploads/8a746098-32b6-4804-bc18-7d05144d63c5.png"

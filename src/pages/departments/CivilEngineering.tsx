@@ -13,21 +13,21 @@ const CivilEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Civil Engineering",
       experience: "18 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/ovable-uploads/departments/civil.png"
     },
     {
       name: "Prof. Meera Nair",
       designation: "Associate Professor",
       qualification: "M.Tech in Structural Engineering",
       experience: "14 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/ovable-uploads/departments/civil.png"
     },
     {
       name: "Mr. Karthik Reddy",
       designation: "Assistant Professor",
       qualification: "M.E in Civil Engineering",
       experience: "10 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/ovable-uploads/departments/civil.png"
     }
   ];
 

@@ -12,21 +12,21 @@ const ElectricalAndElectronicsEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Power Systems",
       experience: "19 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/eee.png"
     },
     {
       name: "Prof. Vikram Rathod",
       designation: "Professor",
       qualification: "M.Tech in VLSI Design",
       experience: "15 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/eee.png"
     },
     {
       name: "Mr. Sameer Ali",
       designation: "Assistant Professor",
       qualification: "M.E in Control Systems",
       experience: "9 years",
-      image: "/lovable-uploads/87274ead-3670-4b43-91fe-3dc4e1ff893a.png"
+      image: "/lovable-uploads/departments/eee.png"
     }
   ];
 
