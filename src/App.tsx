@@ -21,6 +21,7 @@ import HostelTransport from "./pages/HostelTransport";
 import ClubsCells from "./pages/ClubsCells";
 import Academics from "./pages/Academics";
 import NotFound from "./pages/NotFound";
+import AboutUs from "./pages/AboutUs"; // <<< 1. IMPORT THE NEW PAGE
 
 // Department Page Imports
 import ComputerEngineering from "./pages/departments/ComputerEngineering";
@@ -46,6 +47,7 @@ const AppContent = () => {
         <Routes>
           {/* Wrap every page's element with PageWrapper */}
           <Route path="/" element={<PageWrapper><Index /></PageWrapper>} />
+          <Route path="/about" element={<PageWrapper><AboutUs /></PageWrapper>} /> {/* <<< 2. ADD THE ROUTE */}
           <Route path="/admission" element={<PageWrapper><AdmissionForm /></PageWrapper>} />
           <Route path="/campus-tour" element={<PageWrapper><CampusTour /></PageWrapper>} />
           <Route path="/placement-details" element={<PageWrapper><PlacementDetails /></PageWrapper>} />

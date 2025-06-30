@@ -1,3 +1,5 @@
+// src/components/Header.tsx (or your path to the Header component)
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -7,10 +9,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
   
-  // Create a ref to get the header's height for scroll-offset calculations
   const headerRef = useRef<HTMLElement>(null);
 
-  // Effect to handle background change on scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -19,14 +19,12 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Effect to lock body scroll when mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
       const scrollY = window.scrollY;
       document.body.style.position = 'fixed';
       document.body.style.top = `-${scrollY}px`;
       document.body.style.width = '100%';
-      // IMPROVEMENT: Prevent scrolling the content behind the overlay on mobile
       document.body.style.overscrollBehaviorY = 'contain';
 
       return () => {
@@ -38,10 +36,12 @@ const Header = () => {
       };
     }
   }, [isMenuOpen]);
-
+  
+  // --- MODIFICATION HERE ---
+  // Changed the 'About' link to point to the new '/about' page.
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '#about' },
+    { name: 'About', href: '/about' }, // CHANGED
     { name: 'Departments', href: '#departments' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Clubs & Cells', href: '/clubs-cells' },
@@ -51,13 +51,13 @@ const Header = () => {
     { name: 'Hostel & Transport', href: '/hostel-transport' },
   ];
 
-  // IMPROVEMENT: Updated navigation click handler for better anchor link scrolling
   const handleNavClick = (href: string) => {
-    setIsMenuOpen(false); // Close menu on any navigation
+    setIsMenuOpen(false);
     
     if (href.startsWith('/')) {
       navigate(href);
-      // NOTE: Assumes a <ScrollToTop /> component is used in App.tsx for page navigations
+      // Scroll to top when navigating to a new page
+      window.scrollTo(0, 0); 
     } else if (href.startsWith('#')) {
       
       const scrollToAction = () => {
@@ -65,7 +65,6 @@ const Header = () => {
         if (element) {
           const headerHeight = headerRef.current?.offsetHeight || 0;
           const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-          // Calculate the final position, subtracting header height and adding 20px of padding
           const offsetPosition = elementPosition - headerHeight - 20;
 
           window.scrollTo({
@@ -75,14 +74,10 @@ const Header = () => {
         }
       };
       
-      // Check if the element exists on the current page
       if (document.querySelector(href)) {
-        // A short timeout is needed to allow the scroll-lock to release before we scroll
         setTimeout(scrollToAction, 100);
       } else {
-        // If not, navigate to the homepage first, then scroll
         navigate('/');
-        // Use a longer timeout to allow the homepage to render
         setTimeout(scrollToAction, 200);
       }
     }
@@ -113,7 +108,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Header - Attach the ref here */}
+      {/* Main Header */}
       <header ref={headerRef} className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/90 backdrop-blur-lg shadow-md' 
@@ -121,7 +116,6 @@ const Header = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center py-3">
-            {/* Logo Section */}
             <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => handleNavClick('/')}>
               <img 
                 src="/lovable-uploads/192376b7-a3a6-4a41-8428-e34e5a4290bc.png" 
@@ -136,7 +130,6 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center">
               {navItems.map((item) => (
                 <button
@@ -150,7 +143,6 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors z-50"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
