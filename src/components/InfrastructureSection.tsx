@@ -8,7 +8,7 @@ const InfrastructureSection = () => {
       id: 1,
       title: 'Modern Computer Labs',
       description: 'State-of-the-art computer laboratories with latest hardware and software for comprehensive learning.',
-      image: '/lovable-uploads/lovable-uploads/departments/computer.png',
+      image: '/lovable-uploads/departments/computer.png',
       icon: Computer,
       features: ['Latest Hardware', 'High-Speed Internet', 'Modern Software', '24/7 Access']
     },
@@ -16,7 +16,7 @@ const InfrastructureSection = () => {
       id: 2,
       title: 'Advanced CNC Machines',
       description: 'Industry-standard CNC machines and manufacturing equipment for hands-on technical training.',
-      image: '/lovable-uploads/37c7b740-9152-4c97-86c6-ccaccb19dd7b.png',
+      image: '/lovable-uploads/infrastructure/37c7b740-9152-4c97-86c6-ccaccb19dd7b.png',
       icon: Settings,
       features: ['CNC Machines', 'UTM Equipment', 'Manufacturing Tools', 'Industry Standards']
     },
@@ -24,7 +24,7 @@ const InfrastructureSection = () => {
       id: 3,
       title: 'Comprehensive Libraries',
       description: 'Well-stocked libraries with extensive technical books, journals, and digital resources.',
-      image: '/lovable-uploads/44372ccd-82f5-441a-a28c-5b02e618c2de.png',
+      image: '/lovable-uploads/infrastructure/44372ccd-82f5-441a-a28c-5b02e618c2de.png',
       icon: BookOpen,
       features: ['Technical Books', 'Digital Library', 'Research Journals', 'Study Spaces']
     },
@@ -32,7 +32,7 @@ const InfrastructureSection = () => {
       id: 4,
       title: 'Surveying Equipment',
       description: 'Professional surveying instruments and tools for civil engineering practical training.',
-      image: '/lovable-uploads/f6d9ac03-2001-4e93-b085-cc2ba55dacf5.png',
+      image: '/lovable-uploads/infrastructure/f6d9ac03-2001-4e93-b085-cc2ba55dacf5.png',
       icon: MapPin,
       features: ['Total Stations', 'Theodolites', 'GPS Equipment', 'Field Training']
     },
@@ -40,7 +40,7 @@ const InfrastructureSection = () => {
       id: 5,
       title: 'Mechanical Workshop',
       description: 'Fully equipped mechanical workshop with latest tools and machinery for practical learning.',
-      image: '/lovable-uploads/ba3c4e6b-8808-48a1-a084-cd2fcfce6a09.png',
+      image: '/lovable-uploads/infrastructure/ba3c4e6b-8808-48a1-a084-cd2fcfce6a09.png',
       icon: Settings,
       features: ['Modern Machinery', 'Safety Equipment', 'Tool Room', 'Project Work']
     },
@@ -48,7 +48,7 @@ const InfrastructureSection = () => {
       id: 6,
       title: 'Spacious Campus',
       description: 'Beautiful and spacious campus providing an ideal environment for learning and growth.',
-      image: '/lovable-uploads/ca820679-5f37-43f3-9650-1c0d5dc02627.png',
+      image: '/lovable-uploads/banner/ca820679-5f37-43f3-9650-1c0d5dc02627.png',
       icon: Users,
       features: ['Green Campus', 'Sports Facilities', 'Hostels', 'Transport']
     }
