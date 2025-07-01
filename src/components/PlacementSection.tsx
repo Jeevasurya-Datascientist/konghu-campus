@@ -112,7 +112,7 @@ const PlacementSection = () => {
           <div className="relative">
             <div className="relative bg-white p-4 rounded-2xl shadow-xl">
               <img 
-                src="/lovable-uploads/placements/b5630ac6-a28b-4821-bea3-18d36c2d437d.png" 
+                src="/lovable-uploads/placements/placement 1.jpg" 
                 alt="Placement Achievement - TEAL Company Placements" 
                 className="w-full h-auto rounded-xl"
               />

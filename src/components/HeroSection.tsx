@@ -9,10 +9,10 @@ const HeroSection = () => {
   
   // Dynamic hero images that change every 5 seconds
   const heroImages = [
-    "/lovable-uploads/departments/computer.png",
-    "/lovable-uploads/placements/9b2c1b6c-9f84-4436-95d7-6eb87d6e78b2.png",
-    "/lovable-uploads/infrastructure/3156b9ab-cff6-4044-ab99-a6f46f01eec6.png",
-    "/lovable-uploads/sports/8a746098-32b6-4804-bc18-7d05144d63c5.png"
+    "/lovable-uploads/infrastructure/Campus 1.jpg",
+    "/lovable-uploads/infrastructure/Campus 2.jpg",
+    "/lovable-uploads/infrastructure/Campus 3.jpg",
+    "/lovable-uploads/infrastructure/Campus 4.jpg"
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -37,7 +37,7 @@ const HeroSection = () => {
       {/* Campus Image Overlay */}
       <div className="absolute inset-0 opacity-20">
         <img 
-          src="/lovable-uploads/banner/ca820679-5f37-43f3-9650-1c0d5dc02627.png" 
+          src="/lovable-uploads/infrastructure/Main block.jpg" 
           alt="Campus View" 
           className="w-full h-full object-cover"
         />
@@ -46,37 +46,37 @@ const HeroSection = () => {
       {/* Floating Department Images */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img 
-          src="/lovable-uploads/departments/8e737f85-f2cf-4655-be31-7e112bafffef.png" 
+          src="/lovable-uploads/departments/computer.png" 
           alt="Computer Lab" 
           className="absolute top-20 right-10 w-24 h-16 rounded-lg opacity-30 animate-bounce"
           style={{ animationDelay: '0s', animationDuration: '3s' }}
         />
         <img 
-          src="/lovable-uploads/placements/9b2c1b6c-9f84-4436-95d7-6eb87d6e78b2.png" 
+          src="/lovable-uploads/departments/mechanical.png" 
           alt="CNC Machines" 
           className="absolute top-40 left-10 w-28 h-20 rounded-lg opacity-25 animate-float"
           style={{ animationDelay: '1s' }}
         />
         <img 
-          src="/lovable-uploads/infrastructure/3156b9ab-cff6-4044-ab99-a6f46f01eec6.png" 
+          src="/lovable-uploads/departments/civil.png" 
           alt="Surveying Equipment" 
           className="absolute bottom-40 right-20 w-32 h-24 rounded-lg opacity-20 animate-pulse"
           style={{ animationDelay: '2s' }}
         />
         <img 
-          src="/lovable-uploads/sports/8a746098-32b6-4804-bc18-7d05144d63c5.png" 
+          src="/lovable-uploads/departments/automobile.png" 
           alt="Auto Workshop" 
           className="absolute bottom-20 left-20 w-36 h-24 rounded-lg opacity-30 animate-bounce"
           style={{ animationDelay: '1.5s', animationDuration: '4s' }}
         />
         <img 
-          src="/lovable-uploads/departments/dd4bbccf-4d4b-4f1b-8429-fe8f17c4dd5d.png" 
+          src="/lovable-uploads/departments/ece.png" 
           alt="Physics Lab" 
           className="absolute top-60 right-40 w-24 h-20 rounded-lg opacity-25 animate-float"
           style={{ animationDelay: '0.5s' }}
         />
         <img 
-          src="/lovable-uploads/infrastructure/c0875849-38a0-4fb9-b01a-953f3180b2f7.png" 
+          src="/lovable-uploads/departments/eee.png" 
           alt="Lab Equipment" 
           className="absolute top-80 left-40 w-20 h-16 rounded-lg opacity-20 animate-pulse"
           style={{ animationDelay: '2.5s' }}
