@@ -30,7 +30,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/192376b7-a3a6-4a41-8428-e34e5a4290bc.png" 
+                  src="/lovable-uploads/KVPC Logo.png" 
                   alt="Konghu Velalar Polytechnic College Logo" 
                 />
                 </div>

@@ -101,7 +101,7 @@ const ComputerEngineering = () => {
               </div>
               <div>
                 <img 
-                  src="/lovable-uploads/8e737f85-f2cf-4655-be31-7e112bafffef.png" 
+                  src="/lovable-uploads/departments/computer.png" 
                   alt="Computer Lab"
                   className="rounded-xl shadow-lg w-full h-64 object-cover"
                 />

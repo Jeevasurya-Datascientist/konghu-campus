@@ -4,10 +4,10 @@ import { Star, Trophy, Award } from 'lucide-react';
 
 const AchievementsSection = () => {
   const stateAchievements = [
-    { name: 'P.SUBHASHINI', score: '698/700', image: '/lovable-uploads/3c9bf3cc-a2a5-4bc3-809a-fd5fa0ebd936.png' },
-    { name: 'A.SELVAN', score: '696/700', image: '/lovable-uploads/3c9bf3cc-a2a5-4bc3-809a-fd5fa0ebd936.png' },
-    { name: 'S.RAJALAKSHMI', score: '695/700', image: '/lovable-uploads/3c9bf3cc-a2a5-4bc3-809a-fd5fa0ebd936.png' },
-    { name: 'M.BHARATH', score: '695/700', image: '/lovable-uploads/3c9bf3cc-a2a5-4bc3-809a-fd5fa0ebd936.png' },
+    { name: 'P.SUBHASHINI', score: '698/700',       image: '/lovable-uploads/banner/placement acheivement.png' },
+    { name: 'A.SELVAN', score: '696/700',       image: '/lovable-uploads/banner/placement acheivement.png' },
+    { name: 'S.RAJALAKSHMI', score: '695/700',       image: '/lovable-uploads/banner/placement acheivement.png' },
+    { name: 'M.BHARATH', score: '695/700',       image: '/lovable-uploads/banner/placement acheivement.png' },
   ];
 
   const toppers = [

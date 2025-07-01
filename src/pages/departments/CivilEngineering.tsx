@@ -27,7 +27,7 @@ const CivilEngineering = () => {
       designation: "Assistant Professor",
       qualification: "M.E in Civil Engineering",
       experience: "10 years",
-      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
+      image: "/lovable-uploads/departments/civil.png"
     }
   ];
 
@@ -91,7 +91,7 @@ const CivilEngineering = () => {
               </div>
               <div>
                 <img 
-                  src="/lovable-uploads/3156b9ab-cff6-4044-ab99-a6f46f01eec6.png" 
+                  src="/lovable-uploads/departments/civil.png" 
                   alt="Civil Engineering Lab"
                   className="rounded-xl shadow-lg w-full h-64 object-cover"
                 />

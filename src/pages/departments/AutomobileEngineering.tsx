@@ -13,21 +13,21 @@ const AutomobileEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Automobile Engineering",
       experience: "17 years",
-      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
+      image: "/lovable-uploads/departments/automobile.png"
     },
     {
       name: "Prof. Anitha Rao",
       designation: "Associate Professor",
       qualification: "M.Tech in Automotive Engineering",
       experience: "13 years",
-      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
+      image: "/lovable-uploads/departments/automobile.png"
     },
     {
       name: "Mr. Sanjay Reddy",
       designation: "Assistant Professor",
       qualification: "M.E in Automobile Engineering",
       experience: "9 years",
-      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
+      image: "/lovable-uploads/departments/automobile.png"
     }
   ];
 
@@ -91,7 +91,7 @@ const AutomobileEngineering = () => {
               </div>
               <div>
                 <img 
-                  src="/lovable-uploads/8a746098-32b6-4804-bc18-7d05144d63c5.png" 
+                  src="/lovable-uploads/departments/automobile.png" 
                   alt="Automobile Workshop"
                   className="rounded-xl shadow-lg w-full h-64 object-cover"
                 />
