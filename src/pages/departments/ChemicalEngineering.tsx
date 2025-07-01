@@ -12,21 +12,21 @@ const ChemicalEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Chemical Engineering",
       experience: "18 years",
-      image: "/lovable-uploads/departments/chemical.png"
+      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
     },
     {
       name: "Prof. Arjun Singh",
       designation: "Professor",
       qualification: "M.Tech in Biochemical Engineering",
       experience: "14 years",
-      image: "/lovable-uploads/departments/chemical.png"
+      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
     },
     {
       name: "Ms. Meera Krishnan",
       designation: "Assistant Professor",
       qualification: "M.S. in Material Science",
       experience: "8 years",
-      image: "/lovable-uploads/departments/chemical.png"
+      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
     }
   ];
 

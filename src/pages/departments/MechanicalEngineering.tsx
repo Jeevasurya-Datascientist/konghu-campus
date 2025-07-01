@@ -91,7 +91,7 @@ const MechanicalEngineering = () => {
               </div>
               <div>
                 <img 
-                  src="/lovable-uploads/9b2c1b6c-9f84-4436-95d7-6eb87d6e78b2.png" 
+                  src="/lovable-uploads/departments/mechanical.png" 
                   alt="Mechanical Engineering Workshop"
                   className="rounded-xl shadow-lg w-full h-64 object-cover"
                 />

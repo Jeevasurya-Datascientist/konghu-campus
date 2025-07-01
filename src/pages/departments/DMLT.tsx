@@ -13,21 +13,21 @@ const DMLT = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Medical Laboratory Technology",
       experience: "15 years",
-      image: "/lovable-uploads/departments/dmlt.jpeg"
+      image: "/lovable-uploads/departments/dmlt.jpg"
     },
     {
       name: "Prof. Sita Ram",
       designation: "Associate Professor",
       qualification: "M.Sc in Clinical Biochemistry",
       experience: "12 years",
-      image: "/lovable-uploads/departments/dmlt.jpeg"
+      image: "/lovable-uploads/departments/dmlt.jpg"
     },
     {
       name: "Ms. Kavitha Nair",
       designation: "Assistant Professor",
       qualification: "M.Sc in Medical Microbiology",
       experience: "8 years",
-      image: "/lovable-uploads/departments/dmlt.jpeg"
+      image: "/lovable-uploads/departments/dmlt.jpg"
     }
   ];
 

@@ -63,7 +63,7 @@ const PetroChemicalEngineering = () => {
               </div>
               <div>
                 <img 
-                  src="/lovable-uploads/PASTE_PETROCHEMICAL_LAB_FILENAME_HERE.png" 
+                  src="/lovable-uploads/departments/petrochemical.png" 
                   alt="Petrochemical Lab"
                   className="rounded-xl shadow-lg w-full h-64 object-cover"
                 />

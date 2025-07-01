@@ -20,14 +20,14 @@ const CivilEngineering = () => {
       designation: "Associate Professor",
       qualification: "M.Tech in Structural Engineering",
       experience: "14 years",
-      image: "/ovable-uploadsdepartments/civil.png"
+      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
     },
     {
       name: "Mr. Karthik Reddy",
       designation: "Assistant Professor",
       qualification: "M.E in Civil Engineering",
       experience: "10 years",
-      image: "/ovable-uploads/departments/civil.png"
+      image: "/lovable-uploads/N Viswanathan_Principal.jpg"
     }
   ];
 

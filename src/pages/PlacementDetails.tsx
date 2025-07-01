@@ -109,7 +109,7 @@ const PlacementDetails = () => {
           <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Latest Placement Achievement</h2>
             <img 
-              src="/lovable-uploads/b5630ac6-a28b-4821-bea3-18d36c2d437d.png" 
+              src="/lovable-uploads/placements/placement 2.jpg" 
               alt="TEAL Company Placements Achievement" 
               className="max-w-full h-auto rounded-xl mx-auto shadow-lg"
             />

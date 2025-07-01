@@ -13,21 +13,21 @@ const ComputerEngineering = () => {
       designation: "Head of Department",
       qualification: "Ph.D in Computer Science",
       experience: "15 years",
-      image: "/lovable-uploads/lovable-uploads/departments/computer.png"
+      image: "/lovable-uploads/departments/computer.png"
     },
     {
       name: "Prof. Priya Sharma",
       designation: "Associate Professor",
       qualification: "M.Tech in Software Engineering",
       experience: "12 years",
-      image: "/lovable-uploads/lovable-uploads/departments/computer.png"
+      image: "/lovable-uploads/departments/computer.png"
     },
     {
       name: "Mr. Arun Krishnan",
       designation: "Assistant Professor",
       qualification: "M.E in Computer Science",
       experience: "8 years",
-      image: "/lovable-uploads/lovable-uploads/departments/computer.png"
+      image: "/lovable-uploads/departments/computer.png"
     }
   ];
 

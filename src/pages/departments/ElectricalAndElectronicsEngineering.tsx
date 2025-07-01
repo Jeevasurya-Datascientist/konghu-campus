@@ -65,7 +65,7 @@ const ElectricalAndElectronicsEngineering = () => {
               </div>
               <div>
                 <img 
-                  src="/lovable-uploads/PASTE_EEE_LAB_FILENAME_HERE.png" 
+                  src="/lovable-uploads/departments/eee.png" 
                   alt="Electrical Lab"
                   className="rounded-xl shadow-lg w-full h-64 object-cover"
                 />

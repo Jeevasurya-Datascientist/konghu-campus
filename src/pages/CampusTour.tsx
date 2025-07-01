@@ -26,25 +26,25 @@ const CampusTour = () => {
     {
       title: "Computer Labs",
       description: "State-of-the-art computer laboratories with latest software",
-      image: "/lovable-uploads/d1601f37-aa37-4632-8f5f-4d627ac52a76.png",
+      image: "/lovable-uploads/departments/computer.png",
       icon: <Camera className="h-6 w-6" />
     },
     {
       title: "Engineering Workshops",
       description: "Modern CNC machines and manufacturing equipment",
-      image: "/lovable-uploads/9ed342bb-ca6b-4bbc-a740-ab87a2bc065d.png",
+      image: "/lovable-uploads/departments/mechanical.png",
       icon: <Users className="h-6 w-6" />
     },
     {
       title: "Civil Engineering Lab",
       description: "Advanced surveying and testing equipment",
-      image: "/lovable-uploads/ecddb56d-486a-4a64-88a0-486b5fe49b30.png",
+      image: "/lovable-uploads/departments/civil.png",
       icon: <MapPin className="h-6 w-6" />
     },
     {
       title: "Automobile Workshop",
       description: "Hands-on training with real automotive components",
-      image: "/lovable-uploads/8eae1ff9-2fe1-46bf-a0b5-ae6915e837be.png",
+      image: "/lovable-uploads/departments/automobile.png",
       icon: <Clock className="h-6 w-6" />
     }
   ];

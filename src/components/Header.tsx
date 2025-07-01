@@ -118,7 +118,7 @@ const Header = () => {
           <div className="flex justify-between items-center py-3">
             <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => handleNavClick('/')}>
               <img 
-                src="/lovable-uploads/192376b7-a3a6-4a41-8428-e34e5a4290bc.png" 
+                src="/lovable-uploads/KVPC Logo.png" 
                 alt="Konghu Velalar Polytechnic College Logo" 
                 className="w-14 h-14 rounded-full shadow-md group-hover:scale-110 transition-transform duration-300"
               />
